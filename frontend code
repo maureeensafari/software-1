@@ -1,51 +1,22 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>THE NGANG EVENTS</title>
-  <style>
-    /* CSS styles for the reminder form */
-    .reminder-form {
-      max-width: 400px;
-      margin: 0 auto;
-    }
-    .reminder-form label,
-    .reminder-form input,
-    .reminder-form button {
-      display: block;
-      margin-bottom: 10px;
-    }
-  </style>
-</head>
-<body>
-  <div class="events reminder-form">
-    <h2>Events</h2>
-    <label for="name of event">Add event:</label>
-    <input type="text" id="event-name" required>
-    
-    <label for="event-date">Date:</label>
-    <input type="date" id="date" required>
-    
-    <button onclick="Remindme()">Remind me</button>
-  </div>
-
-  <script>
-    // JavaScript code for setting the reminder
-    function Remindme() {
-      var Nameofevent = document.getElementById('add event').value;
-      var Date = document.getElementById('Date').value;
-      
-      if (Nameofevent && Date) {
-        // Here you can implement the logic to set the reminder,
-        // such as using Web Notifications or sending data to a server.
-        // For this example, we'll simply log the details to the console.
-        console.log('Event Name:', eventName);
-        console.log('Event Date:', eventDate);
-        
-        alert('Reminder set for ' + eventName + ' on ' + eventDate);
-      } else {
-        alert('Please enter both the event name and date.');
-      }
-    }
-  </script>
-</body>
+  <head>
+    <title>Reminder System</title>
+    <link rel="stylesheet" href="reminder.css">
+  </head>
+  <body>
+    <h1>Reminder System</h1>
+    <form id="reminder-form">
+      <label for="event-name">Event Name:</label>
+      <input type="text" id="event-name" name="event-name"><br><br>
+      <label for="event-date">Event Date:</label>
+      <input type="date" id="event-date" name="event-date"><br><br>
+      <label for="event-time">Event Time:</label>
+      <input type="time" id="event-time" name="event-time"><br><br>
+      <label for="event-description">Event Description:</label><br>
+      <textarea id="event-description" name="event-description" rows="5" cols="50"></textarea><br><br>
+      <button type="submit">Set Reminder</button>
+    </form>
+    <script src="reminder.js"></script>  
+  </body>
 </html>
