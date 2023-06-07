@@ -4,13 +4,28 @@ window.addEventListener('load', ()=>{
     fetch('data.php')
     .then(response => response.json())
     .then(data => {
-        for(let reminder of data)
+        if (data.length > 0)
         {
-            let val = JSON.parse(reminder)
-            reminders.innerHTML += 
-            `
-                <li>${val.name}</li>
-            `
+            for(let reminder of data)
+            {
+                let val = JSON.parse(reminder)
+                reminders.innerHTML += 
+                `
+                    <li class="reminder-item">
+                        <div class="reminder-info">
+                            <p>${val.name}</p>
+                            <p>${val.date}</p>
+                        </div>
+                        <p class="description">
+                            ${val.description}
+                        </p>
+                    </li>
+                `
+            }
+        }
+        else
+        {
+            reminders.innerHTML = `<p style="text-align: center;">No Reminders...</p>`
         }
     })
     .catch(error => {

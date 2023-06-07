@@ -33,7 +33,4 @@ if (mysqli_query($connection, $sql)) {
 
 // Close the database connection
 mysqli_close($connection);
-
-
-
 ?>

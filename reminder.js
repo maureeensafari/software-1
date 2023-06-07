@@ -4,12 +4,12 @@ const viewBtn = document.querySelector(".view-btn");
 var data;
 
 form.addEventListener('submit', (e) => {
-    e.preventDefault();
-    
-    var eventName = document.getElementById("event-name").value;
-    var eventDate = document.getElementById("event-date").value;
-    var eventTime = document.getElementById("event-time").value;
-    var eventDescription= document.getElementById("event-description").value;
+    e.preventDefault()
+
+    const eventName = document.getElementById("event-name").value;
+    const eventDate = document.getElementById("event-date").value;
+    const eventTime = document.getElementById("event-time").value;
+    const eventDescription= document.getElementById("event-description").value;
     
     const data = {
         name:eventName,
@@ -27,10 +27,8 @@ form.addEventListener('submit', (e) => {
     }).then(function (response) { 
         return response.text();
     })
-    eventDate = "";
-    eventDescription="";
-    eventName="";
-    eventTime="";
+
+    location.reload()
 });
 
 
