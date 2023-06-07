@@ -1,0 +1,13 @@
+<?php
+$data = json_decode(file_get_contents('php://input'), true);
+
+$name = $data['name'];
+$date = $data['date'];
+$time = $data['time'];
+$description = $data['description'];
+
+// Store the data in a database or file
+
+$message = "Reminder set for $name on $date at $time";
+echo $message;
+?>
