@@ -1,0 +1,60 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: hsl(100, 10%, 94%);
+  }
+  
+  h1 {
+    text-align: center;
+    color: #333;
+  }
+  
+  form {
+    max-width: 600px;
+    margin: auto;
+    background-color: #1bdddd;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 10px;
+  }
+  
+  input[type="text"],
+  input[type="date"],
+  input[type="time"],
+  textarea {
+    width: 90%;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    margin: 0 auto 20px;
+  }
+  
+  button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #3e8e41;
+  }
+
+
+  /* VIEW REMINDERS STYLES */
+  .reminders-heading {
+    text-align: center;
+  }
+
+
+  .reminders-container {
+    width: 80vh;
+    max-width: 500px;
+    margin: 2rem auto;
+  }
